@@ -36,7 +36,7 @@ const reviews = await getReviews({
       "userName": "Joe Wi"
     }
   }
-];
+]
 ```
 
 ## FAQ
