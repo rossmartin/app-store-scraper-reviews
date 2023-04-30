@@ -20,20 +20,20 @@ const reviews = await getReviews({
 
 `sleep` (number) - The time in ms to wait before each API request to get reviews. 20 are grabbed per request.
 
-### Response shape
+### Response example
 
-```ts
+```json
 [
   {
-    id: string;
-    type: string;
-    attributes: {
-      date: string;
-      review: string;
-      rating: number;
-      isEdited: boolean;
-      title: string;
-      userName: string;
+    "id": "6637304379",
+    "type": "user-reviews",
+    "attributes": {
+      "date": "2020-11-12T16:15:38Z",
+      "review": "When Siri didn’t do this, I was glad to find an app that would accomplish it and set up a Siri command to do it as well. \n\nJust wish I could use options like Portrait mode on my iPhone.",
+      "rating": 4,
+      "isEdited": false,
+      "title": "Glad to find",
+      "userName": "Joe Wi"
     }
   }
 ];
