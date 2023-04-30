@@ -2,6 +2,12 @@
 
 Simple Node.js module to scrape reviews from the App Store. Provides the ability to get all reviews or a number of reviews for a given app. Written in TypeScript and the API response is fully typed.
 
+## Installation
+
+```sh
+npm install app-store-scraper-reviews
+```
+
 ## Usage
 
 ```ts
@@ -18,7 +24,7 @@ const reviews = await getReviews({
 
 `numberOfReviews` (number) - The number of reviews to get. If this is not provided then all reviews will be fetched.
 
-`sleep` (number) - The time in ms to wait before each API request to get reviews. 20 are grabbed per request.
+`sleep` (number) - The time in ms to wait before each API request to get the next 20 reviews.
 
 ### Response Example
 
