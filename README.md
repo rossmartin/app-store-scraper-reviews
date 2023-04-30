@@ -2,6 +2,8 @@
 
 Simple Node.js module to scrape reviews from the App Store. Provides the ability to get all reviews or a number of reviews for a given app. Written in TypeScript and the API response is fully typed.
 
+[![npm version](https://img.shields.io/npm/v/app-store-scraper-reviews?style=plastic)](https://www.npmjs.org/package/app-store-scraper-reviews)
+
 ## Installation
 
 ```sh
