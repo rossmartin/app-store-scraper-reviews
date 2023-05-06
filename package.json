@@ -1,6 +1,6 @@
 {
   "name": "app-store-scraper-reviews",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scrape reviews from the app store",
   "main": "dist/index.js",
   "scripts": {
