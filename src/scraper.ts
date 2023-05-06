@@ -1,7 +1,7 @@
 import { fetchReviews } from './api/fetchReviews';
 import { getToken } from './api/getToken';
 import { sleep as _sleep } from './util';
-import { GetReviewsParams, Reviews } from './types';
+import { GetReviewsParams, Review, GetReviewsResponse } from './types';
 
 export const getReviews = async ({
   country,
@@ -16,13 +16,13 @@ export const getReviews = async ({
     appName,
   });
 
-  const reviews: Reviews['data'][] = [];
+  const reviews: Review[] = [];
   const offsetRegex = /offset=(\d+)/;
   let offset = 0;
   let reviewCount = 0;
 
   while (true) {
-    const result: Reviews = await fetchReviews({
+    const result: GetReviewsResponse = await fetchReviews({
       country,
       appId,
       appName,
@@ -31,7 +31,7 @@ export const getReviews = async ({
     });
 
     if (Array.isArray(result?.data)) {
-      result.data.forEach((obj: any) => {
+      result.data.forEach((obj) => {
         reviews.push(obj);
         reviewCount++;
       });

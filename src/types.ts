@@ -6,12 +6,12 @@ export type GetReviewsParams = {
   sleep?: number;
 };
 
-export interface Reviews {
+export interface GetReviewsResponse {
   next?: string;
-  data?: DataEntity[];
+  data?: Review[];
 }
 
-export interface DataEntity {
+export interface Review {
   id: string;
   type: string;
   attributes: Attributes;
